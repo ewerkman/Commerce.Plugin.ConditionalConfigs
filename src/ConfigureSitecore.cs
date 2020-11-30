@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
+using Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Commerce.Core;
 using Sitecore.Framework.Configuration;
 using Sitecore.Framework.Pipelines.Definitions.Extensions;
-using Sitecore.Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks;
 
-namespace Sitecore.Commerce.Plugin.ConditionalConfigs
+namespace Commerce.Plugin.ConditionalConfigs
 {
     public class ConfigureSitecore : IConfigureSitecore
     {

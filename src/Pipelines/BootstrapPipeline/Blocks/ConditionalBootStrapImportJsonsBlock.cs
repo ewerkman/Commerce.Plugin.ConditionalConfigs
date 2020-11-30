@@ -13,7 +13,7 @@ using Sitecore.Framework.Conditions;
 using Sitecore.Framework.Pipelines;
 using SearchOption = System.IO.SearchOption;
 
-namespace Sitecore.Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks
+namespace Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks
 {
     public class ConditionalBootStrapImportJsonsBlock : PipelineBlock<string, string, CommercePipelineExecutionContext>
     {

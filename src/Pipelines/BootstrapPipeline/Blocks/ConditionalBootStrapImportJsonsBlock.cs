@@ -15,7 +15,7 @@ using SearchOption = System.IO.SearchOption;
 
 namespace Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks
 {
-    public class ConditionalBootStrapImportJsonsBlock : PipelineBlock<string, string, CommercePipelineExecutionContext>
+    public class ConditionalBootStrapImportJsonsBlock : AsyncPipelineBlock<string, string, CommercePipelineExecutionContext>
     {
         private const string ConditionsKey = "$conditions";
         private const string TypeKey = "$type";
@@ -39,7 +39,7 @@ namespace Commerce.Plugin.ConditionalConfigs.Pipelines.BootstrapPipeline.Blocks
             _logger = logger;
         }
 
-        public override async Task<string> Run(string arg, CommercePipelineExecutionContext context)
+        public override async Task<string> RunAsync(string arg, CommercePipelineExecutionContext context)
         {
             Condition.Requires<string>(arg).IsNotNull<string>($"{this.Name}: The argument cannot be null.");
             var files = Directory.GetFiles(_nodeContext.WebRootPath + "\\data\\environments", "*.json", SearchOption.AllDirectories);
